@@ -1,3 +1,12 @@
+###引用方法
+####在入口文件引用
+import Calendar from 'yqt-calendar'
+Vue.use(Calendar)
+####在vue中引用
+<script>
+import 'yqt-calendar/dist/style.css'
+</script>
+
 ### Props
 
 |    name    |    Description   |   type   |default|

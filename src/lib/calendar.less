@@ -1,0 +1,326 @@
+@charset "utf-8";
+@main_blue: #639ef7;
+@minor_blue: #DCEAFF;
+//背景色
+@color-bg: #f2f3f5;
+
+//一般字体颜色
+@fc-normal: #333;
+//提示字体颜色(用在表单dt)
+@fc-label: #666;
+//信息字体颜色(用在text-info)
+@fc-info: #999;
+//文字不可用状态
+@fc-disable: #ccc;
+//placeholder文字颜色
+@fc-placeholder: #a9a9a9;
+
+//边框颜色
+@bc-normal: #d7d7d7;
+//内联边框颜色
+@bc-inline: #e7e7e7;
+
+//有色按钮里的字体颜色
+@color-white: #fff;
+//警告红色
+@color-red: #fa5e3d;
+//橙色
+@color-orange: #ff8b03;
+//绿色
+@color-green: rgb(35, 199, 173);
+//蓝色
+@color-blue: #3864A7;
+@font-blue: #478aee;
+//不可用状态
+@color-disable: #999;
+
+html {
+  font-size: 10000/750vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wh_container {
+  //max-width: 410px;
+  margin: auto;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.vux-picker {
+  height: 100%;
+  width: 50% !important;
+  margin: auto !important;
+  .scroller-indicator {
+    display: none !important;
+    //height: .36rem;
+  }
+  //.scroller-item{
+  //  font-size: .36rem;
+  //  height: .36rem;
+  //  line-height: .36rem;
+  //}
+}
+
+.wh_content_all {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', STHeiti, 'Microsoft Yahei', Tahoma,
+  Simsun, sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 8px;
+  font-size: .34rem;
+  .vux-swiper {
+    //height: 260px !important;
+    height: 5.5rem!important;
+  }
+
+  .content_tabs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    .newTab{
+      -webkit-box-flex: 2;
+      flex: 2;
+      font-size: .36rem!important;
+      padding-top: 0!important;
+      .vux-tab-container{
+        min-height: .8rem;
+        position: relative!important;
+        .vux-tab{
+          position: initial!important;
+          .vux-tab-item {
+            line-height: .9rem!important;
+          }
+        }
+
+      }
+      .vux-tab-item{
+        font-size: .36rem!important;
+      }
+      .vux-tab-selected {
+        color: @font-blue!important;
+        border-bottom: 3px solid @font-blue;
+      }
+      .vux-tab-ink-bar {
+        //margin: 0 .3rem;
+        margin-top: .1rem;
+        height: 1px !important;
+        background-color: @font-blue;
+      }
+    }
+    .vux-tab-warp {
+      -webkit-box-flex: 2;
+      flex: 2;
+      font-size: .36rem!important;
+      .vux-tab-selected {
+        color: @font-blue;
+        border-bottom: 3px solid @font-blue;
+      }
+      .vux-tab-ink-bar {
+        //margin: 0 .3rem;
+        height: 1px !important;
+        background-color: @font-blue;
+      }
+    }
+    .confirm {
+      -webkit-box-flex: 1;
+      flex: 1;
+      color: @font-blue;
+      text-align: center;
+      line-height: .9rem;
+      font-size: .36rem;
+    }
+    .cancel {
+      -webkit-box-flex: 1;
+      flex: 1;
+      color: #333;
+      text-align: center;
+      line-height: .9rem;
+      font-size: .36rem;
+    }
+  }
+}
+
+.yearSelect_content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3%;
+  .yearSelect_content_item {
+    width: 33.3%;
+    div .isThisMonth {
+      //margin: auto;
+      color: @font-blue;
+      text-align: center;
+    }
+    li {
+      font-size: .32rem;
+      margin-bottom: 10.14%;
+      margin-top: 10.14%;
+      text-align: center;
+      color: #333;
+      position: relative;
+    }
+    div .wh_nextDayShow {
+      color: #bfbfbf;
+    }
+  }
+}
+
+.wh_content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 3% 0 3%;
+  width: 100%;
+}
+
+.wh_content:first-child .wh_content_item {
+  color: #333;
+  font-size:.32rem;
+  height: 15%;
+  line-height: 15%;
+}
+
+.wh_content_item {
+  font-size: .3rem;
+  width: 13.4%;
+  padding-bottom: 10.14%;
+  text-align: center;
+  color: #333;
+  position: relative;
+}
+
+.wh_content_item div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wh_content_item li {
+  width: .42rem;
+  height: .42rem;
+  border-radius: 1rem;
+  line-height: .32rem;
+}
+
+@media screen and (min-width: 460px) {
+  .wh_content_item li:hover {
+    background: @font-blue;
+    cursor: pointer
+  }
+}
+
+.wh_top_changge {
+  display: flex;
+}
+
+.wh_top_changge li {
+  cursor: pointer;
+  display: flex;
+  color: #333;
+  font-size:.34rem;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: .47rem;
+}
+
+.wh_top_changge .wh_content_li {
+  cursor: auto;
+  flex: 4;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+
+  .vux-popover {
+    top: 0.8rem !important;
+    left: 45% !important;
+  }
+  .div {
+    width: 100%;
+  }
+}
+
+.wh_jiantou1 {
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #999;
+  border-left: 2px solid #999;
+  transform: rotate(-45deg);
+}
+
+.wh_jiantou1:active, .wh_jiantou2:active {
+  border-color: #ddd;
+}
+
+.wh_content_item div .wh_isToday {
+  margin: auto;
+  background-color: @font-blue;
+  color: @color-white;
+  border-radius: 100px;
+  text-align: center;
+  width: .6rem;
+  height: .6rem;
+  line-height: .6rem;
+}
+
+.wh_jiantou2 {
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid #999;
+  border-right: 2px solid #999;
+  transform: rotate(45deg);
+}
+
+.wh_content_item div .wh_isMark {
+  //margin: auto;
+  border-radius: 100px;
+  border: 1px solid @font-blue;
+  z-index: 2;
+}
+
+.wh_content_item div .isMark {
+  border-radius: .03rem;
+  border: .01rem solid #478aee;
+  z-index: 2;
+  top: .6rem;
+  width: .06rem;
+  height: .06rem;
+  background-color: #478aee;
+  left: .46rem;
+}
+
+.wh_content_item div .isDisable {
+  border-radius:.03rem;
+  border: .01rem solid #ff9632;
+  z-index: 2;
+  top: .6rem;
+  width:.06rem;
+  height: .06rem;
+  background-color: #ff9632;
+  left: .46rem;
+}
+
+.wh_content_item div .wh_nextDayShow {
+  color: #bfbfbf;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .1s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>yqt_calendar</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+
+  </style>
+</head>
+<body>
+    <div id="app">
+      <calendar @choseDay="choseDayChange"  :mark-date=markArr :dis-mark-array=alertArr :display-mode=1
+      :only-marked=true></calendar>
+    </div>
+     <script src="./../node_modules/vue/dist/vue.js"></script>
+     <script src="./yqt_calendar.js"></script>
+  </body>
+  <script>
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          markArr: ['2018/4/4', '2018/4/6','2018/4/11'],
+          alertArr: ['2018/4/9'],
+          isPay: false
+        }
+      },
+      methods: {
+        choseDayChange(item) {
+                console.log('选择了日期', item);
+                let that = this;
+                if (item.date == 1) {
+                    that.showPopup = false;
+                } else if (!item.isMark) {
+                } else {
+                    that.calendarChange(item.date)
+                }
+            },
+
+      }
+    })
+  </script>
+
+  </html>

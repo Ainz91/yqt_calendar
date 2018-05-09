@@ -1,3 +1,5 @@
+### 安装
+cnpm i yqt-calendar -D
 ### 引用方法
 #### 在入口文件引用
 import Calendar from 'yqt-calendar'

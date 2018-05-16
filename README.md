@@ -2,13 +2,14 @@
 cnpm i yqt-calendar -D
 ### 引用方法
 #### 在入口文件引用
-import Calendar from 'yqt-calendar'
-Vue.use(Calendar)
+* import Calendar from 'yqt-calendar'
+* Vue.use(Calendar)
 #### 在vue中引用
 <script>
 import 'yqt-calendar/dist/style.css'
 </script>
-
+#### 使用实例
+<calendar ref="Calendar" @choseDay=""  :markDate="" /calendar>
 ### Props
 
 |    name    |    Description   |   type   |default|
